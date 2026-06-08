@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZENG</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:url('https://i.postimg.cc/SQY2Fv5n/2d8ae66fbfc3b8f0cedd1cad727a2712.jpg') center center/cover no-repeat;
+position:relative;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(8px);
+}
+
+.card{
+position:relative;
+z-index:2;
+width:100%;
+max-width:520px;
+padding:28px;
+border-radius:30px;
+background:rgba(10,10,10,.55);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:
+0 0 50px rgba(0,0,0,.6),
+0 0 80px rgba(125,95,255,.15);
+text-align:center;
+animation:show .8s ease;
+}
+
+@keyframes show{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.logo{
+font-size:72px;
+font-weight:900;
+letter-spacing:8px;
+margin-bottom:25px;
+background:linear-gradient(
+90deg,
+#00e5ff,
+#7d5fff,
+#ff00ff,
+#00e5ff
+);
+background-size:400%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:gradient 6s linear infinite;
+}
+
+@keyframes gradient{
+0%{background-position:0%;}
+100%{background-position:400%;}
+}
+
+.avatar{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:0 auto 20px;
+border:4px solid transparent;
+background:
+linear-gradient(#111,#111) padding-box,
+linear-gradient(135deg,#00e5ff,#7d5fff,#ff00ff) border-box;
+box-shadow:
+0 0 25px rgba(0,229,255,.4),
+0 0 45px rgba(125,95,255,.4);
+}
+
+.status{
+color:#00ff88;
+font-weight:600;
+margin-bottom:25px;
+font-size:14px;
+letter-spacing:2px;
+}
+
+.buttons{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-bottom:30px;
+}
+
+.btn{
+display:block;
+padding:16px;
+border-radius:20px;
+text-decoration:none;
+font-size:20px;
+font-weight:700;
+color:white;
+background:linear-gradient(135deg,#00c6ff,#7d5fff);
+box-shadow:0 0 25px rgba(0,198,255,.3);
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px) scale(1.02);
+box-shadow:0 0 35px rgba(125,95,255,.5);
+}
+
+.friends-title{
+font-size:26px;
+font-weight:800;
+letter-spacing:4px;
+color:white;
+margin-bottom:18px;
+}
+
+.friends{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.friend-card{
+display:flex;
+align-items:center;
+gap:14px;
+padding:14px;
+border-radius:20px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+text-align:left;
+}
+
+.friend-card:hover{
+background:rgba(255,255,255,.12);
+transform:translateX(5px);
+}
+
+.friend-avatar{
+width:58px;
+height:58px;
+border-radius:50%;
+object-fit:cover;
+flex-shrink:0;
+border:2px solid rgba(255,255,255,.15);
+box-shadow:0 0 15px rgba(0,198,255,.3);
+}
+
+.friend-name{
+font-size:17px;
+font-weight:600;
+color:white;
+}
+
+.friend-link{
+margin-top:4px;
+}
+
+.friend-link a{
+color:#8de3ff;
+text-decoration:none;
+font-size:14px;
+}
+
+.friend-link a:hover{
+text-decoration:underline;
+}
+
+.footer{
+margin-top:25px;
+font-size:13px;
+color:rgba(255,255,255,.5);
+letter-spacing:3px;
+}
+
+@media(max-width:768px){
+
+.logo{
+font-size:50px;
+letter-spacing:4px;
+}
+
+.avatar{
+width:145px;
+height:145px;
+}
+
+.btn{
+font-size:18px;
+padding:14px;
+}
+
+.friend-name{
+font-size:15px;
+}
+
+.friends-title{
+font-size:22px;
+}
+
+.card{
+padding:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">ZENG</div>
+
+<img
+class="avatar"
+src="https://i.postimg.cc/SQg8k9Q7/IMG-20260608-154954-356.jpg"
+alt="ZENG">
+
+<div class="status">
+● ONLINE
+</div>
+
+<div class="buttons">
+
+<a class="btn" href="https://t.me/zengskup" target="_blank">
+ PM
+</a>
+
+<a class="btn" href="https://t.me/fizzshopzenga" target="_blank">
+ CHANNEL
+</a>
+
+</div>
+
+<div class="friends-title">
+⚡ FRIENDS
+</div>
+
+<div class="friends">
+
+<div class="friend-card">
+<img class="friend-avatar"
+src="https://i.postimg.cc/XN95BP87/file-00000000863471fa89f7123845c076af.png">
+<div class="friend-name">@tvoistrah1</div>
+</div>
+
+<div class="friend-card">
+<img class="friend-avatar"
+src="https://i.postimg.cc/KvRys6sH/IMG-20260608-160614-425.jpg">
+<div class="friend-name">@salemdostaraa</div>
+</div>
+
+<div class="friend-card">
+<img class="friend-avatar"
+src="https://i.postimg.cc/FF0Sk6Z9/file-000000001dd871fab9e54aecfa363722.png">
+<div>
+<div class="friend-name">@chartsapps</div>
+<div class="friend-link">
+<a href="https://t.me/chartsapps" target="_blank">
+t.me/chartsapps
+</a>
+</div>
+</div>
+</div>
+
+<div class="friend-card">
+<img class="friend-avatar"
+src="https://i.postimg.cc/J7jXHFqh/file-00000000682071faa7241f352bd61ab1.png">
+<div class="friend-name">@Mvp_Tekillov</div>
+</div>
+
+</div>
+
+<div class="footer">
+ZENG • TELEGRAM BIO
+</div>
+
+</div>
+
+</body>
+</html>
